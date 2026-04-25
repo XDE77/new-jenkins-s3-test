@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-    stage('Snyk IaC Scan Test') {
+        stage('Snyk IaC Scan Test') {
             steps {
                 withCredentials([string(credentialsId: 'snyk-api-token-string', variable: 'SNYK_TOKEN')]) {
                     sh '''
